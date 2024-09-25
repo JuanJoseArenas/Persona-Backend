@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class Persona {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	private String nombre;
 	private String apellido;
 	private int edad;
@@ -34,10 +34,13 @@ public class Persona {
 		this.pais = pais;
 		this.estado = estado;
 	}
-	public long getId() {
+    public Persona() {
+    }
+    
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombre() {
